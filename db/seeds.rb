@@ -1,7 +1,38 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
-#   Character.create(name: "Luke", movie: movies.first)
+Sneaker.create(name: "Air Jordan 1 - Bred", image: "jordanbred")
+Sneaker.create(name: "Air Jordan 1 - Chicago", image: "jordanchicago")
+Sneaker.create(name: "Timberlands", image: "timberlands")
+Sneaker.create(name: "White Sneakers", image: "sneakerwhite")
+Sneaker.create(name: "Chelsea Boots - Brown", image: "chelseabrown")
+Sneaker.create(name: "Chelsea Boots - Black", image: "chelseablack")
+Sneaker.create(name: "Boots - Brown", image: "bootsbrown")
+Sneaker.create(name: "Shoes - Black", image: "dressblack")
+Sneaker.create(name: "Shoes - Brown", image: "dressbrown")
+Sneaker.create(name: "Yeezy 350 - Zebra", image: "yeezyzebra")
+
+Watch.create(name: "Omega - Seamaster", image: "omegaseamaster")
+Watch.create(name: "Omega - Speedmaster", image: "omegaspeedmaster")
+Watch.create(name: "Rolex - Daytona", image: "rolexdaytona")
+Watch.create(name: "Rolex - GMT Master", image: "rolexgmt")
+Watch.create(name: "Rolex - Datejust", image: "rolexdatejust")
+Watch.create(name: "Patek Phillipe - Nautilus", image: "pateknautilus")
+Watch.create(name: "Audimars Piguet - Royal Oak", image: "aproyaloak")
+
+Top.create(name: "T-Shirt - White", image: "tshirtwhite")
+Top.create(name: "T-Shirt - Black", image: "tshirtblack")
+Top.create(name: "T-Shirt - Red", image: "tshirtred")
+Top.create(name: "T-Shirt - Grey", image: "tshirtgrey")
+Top.create(name: "Shirt - White", image: "shirtwhite")
+Top.create(name: "Shirt - Black", image: "shirtblack")
+Top.create(name: "Shirt - Blue", image: "shirtblue")
+Top.create(name: "Hoodie - White", image: "hoodiewhite")
+Top.create(name: "Hoodie - Grey", image: "hoodiegrey")
+Top.create(name: "Sweater - White", image: "sweaterwhite")
+Top.create(name: "Sweater - Grey", image: "sweatergrey")
+
+Pant.create(name: "Jeans - Black", image: "jeansblack")
+Pant.create(name: "Jeans - White", image: "Jeanswhite")
+Pant.create(name: "Jeans - Blue", image: "jeansblue")
+Pant.create(name: "Cargo Pants", image: "cargopants")
+Pant.create(name: "Chinos - Beige", image: "chinosbeige")
+Pant.create(name: "Chinos - Black", image: "chinosblack")
+Pant.create(name: "Inception", image: "sneakers")

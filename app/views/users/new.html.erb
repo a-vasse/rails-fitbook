@@ -1,0 +1,8 @@
+<div class="form-card m-2">
+  <%= simple_form_for @user do |f| %>
+    <%= f.input :username %>
+    <%= f.input :photo, as: :file %>
+    <%= f.submit class: 'btn btn-light m-2' %>
+    <%= link_to 'Back to Main', users_path, class: 'btn btn-light m-2' %>
+  <% end %>
+</div>

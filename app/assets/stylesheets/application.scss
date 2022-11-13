@@ -1,0 +1,62 @@
+// Graphical variables
+@import "config/fonts";
+@import "config/colors";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap/scss/bootstrap";
+@import "font-awesome";
+
+// Your CSS partials
+@import "components/index";
+@import "pages/index";
+
+
+
+.avatar {
+  width: 40px;
+  border-radius: 50%;
+}
+
+.login {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  background: white;
+  padding: 8px 16px;
+  border: 1px solid rgb(235,235,235);
+  border-radius: 5%;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+}
+
+.login .login-content {
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.login p {
+  margin: 0;
+  line-height: 1.4;
+  color: #999999;
+  font-weight: bold;
+}
+
+.login .login-actions {
+  opacity: 0;
+  display: flex;
+  transition: ease .3s;
+}
+
+.login:hover .login-actions {
+  opacity: 1;
+}
+
+.login .login-actions a {
+  color: #999999;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.login .login-actions a:hover {
+  color: #555555;
+}
