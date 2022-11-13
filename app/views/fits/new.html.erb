@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="new-card card mt-3">
+    <div class="container form-card m-2">
+      <%= simple_form_for [@user, @fit] do |f| %>
+        <%= f.input :name, label:"Enter a name for your fit:" %>
+        <%= f.association :top, label: "Choose a top:" %>
+        <%= f.association :pant, label: "Choose a pair of pants:" %>
+        <%= f.association :watch, label: "Choose a watch:" %>
+        <%= f.association :sneaker, label: "Choose a pair of shoes:" %>
+        <%= f.submit class: 'btn btn-light m-2' %>
+        <%= link_to 'Back to your fits', user_path(@user), class: 'btn btn-light m-2' %>
+      <% end %>
+    </div>
+  </div>
+</div>

@@ -1,13 +1,25 @@
-<%= link_to "New User", new_user_path, class:"btn btn-light m-2" %>
 
-<% @users.each do |user| %>
-  <div class="login">
-    <div class="avatar" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= list.photo.attached? ? cl_image_path(user.photo.key) : image_path("users/blankuser") %>')" >
-    <div class="login-content">
-      <p><%= link_to user.username, user_path(user) %></p>
-    </div>
-    <div class="login-actions">
-      <a href="#">Dumpter <i class="fa-solid fa-dumpster"></i></a>
-    </div>
+<div class="login-container container mt-5">
+  <div class="me-5">
+    <h1>Fitbook</h1>
   </div>
-<% end %>
+  <div>
+    <div class="login-button container">
+    <%= link_to "New User", new_user_path, class:"btn btn-light mb-4" %>
+    </div>
+    <% @users.each do |user| %>
+      <div class="login">
+        <%= user.photo.attached? ? cl_image_tag(user.photo.key, class: "avatar") : image_tag("users/blankuser", class:"avatar") %>
+        <div class="login-content">
+          <p><%= link_to user.username, user_path(user) %></p>
+        </div>
+        <div class="login-actions">
+        <p class="ml-5">Dumpter</p>
+          <%= link_to user_path(user), data: { turbo_method: 'delete', turbo_confirm: "Delete User: #{user.username}?" }, class: 'btn' do %>
+            <i class="fa-solid fa-dumpster"></i>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
