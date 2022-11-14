@@ -9,7 +9,7 @@
     </div>
     <% @users.each do |user| %>
       <div class="login">
-        <%= user.photo.attached? ? cl_image_tag(user.photo.key, class: "avatar") : image_tag("users/blankuser", class:"avatar") %>
+        <%= user.photo.attached? ? cl_image_tag(user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
         <div class="login-content">
           <p><%= link_to user.username, user_path(user) %></p>
         </div>
