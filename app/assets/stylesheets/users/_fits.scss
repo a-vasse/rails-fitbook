@@ -1,34 +1,62 @@
-.new-card {
-  padding:8px;
-  width: 50%;
+.fit-container {
+  display:flex;
+  justify-content: center;
+  padding: 12px;
 }
 
-.show-card {
+.user-bar {
+  margin-top: 2rem;
   display: flex;
-  padding: 16px 16px;
-  border: 1px solid rgb(235,235,235);
-  border-radius: 16px;
-  box-shadow: 8px 8px 8px #00000033;
-  background-color:#359bfc;
-  color: #292929;
-  h1 {
-    font-family: Lobster;
+  align-items: center;
+  background: white;
+  padding: 8px;
+  border: 1px solid #a1a1a1;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px #00000033;
+  line-height: 1.4;
+}
+
+.user-bar .avatar {
+  width: 120px;
+}
+
+.fit-card-container {
+  display:grid;
+  margin-top: 3rem;
+  grid-template-columns: repeat(2, max-content);
+  gap: 1rem;
+}
+
+.fit-card {
+  background: white;
+  padding: 8px;
+  border: 1px solid #a1a1a1;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 2px #00000033;
+  margin-bottom: 8px;
+
+  h4 {
+    margin-left:8px;
   }
 }
 
-.show-buttons {
+.item-card-container {
   display:flex;
-  justify-content:center;
 }
 
 .item-card {
-  margin: 4px;
-  box-shadow: 4px 4px 4px #00000033;
-  object-fit: cover;
-  padding: 0px;
+  padding: 8px;
 }
 
-.notes {
-  display:flex;
-  justify-content: flex-end;
+.item-card p {
+  margin: 0px;
+  font-size: 14px;
+}
+
+.item-img {
+  height: 130px;
+  width: 130px;
+  object-fit: cover;
+  border: 1px solid #a1a1a1;
+  border-radius: 0.25rem;
 }

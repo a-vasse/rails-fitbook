@@ -50,12 +50,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_13_092301) do
     t.bigint "sneaker_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "watch_id", null: false
     t.index ["pant_id"], name: "index_fits_on_pant_id"
     t.index ["sneaker_id"], name: "index_fits_on_sneaker_id"
     t.index ["top_id"], name: "index_fits_on_top_id"
     t.index ["user_id"], name: "index_fits_on_user_id"
-    t.index ["watch_id"], name: "index_fits_on_watch_id"
   end
 
   create_table "pants", force: :cascade do |t|
@@ -85,18 +83,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_11_13_092301) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "watches", force: :cascade do |t|
-    t.string "name"
-    t.string "image"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "fits", "pants"
   add_foreign_key "fits", "sneakers"
   add_foreign_key "fits", "tops"
   add_foreign_key "fits", "users"
-  add_foreign_key "fits", "watches"
 end

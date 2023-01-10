@@ -24,6 +24,6 @@ class FitsController < ApplicationController
   private
 
   def fit_params
-    params.require(:fit).permit(:name, :sneaker_id, :watch_id, :top_id, :pant_id, :user_id)
+    params.require(:fit).permit(:name, :sneaker_id, :top_id, :pant_id, :user_id)
   end
 end

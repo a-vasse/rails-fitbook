@@ -1,28 +1,25 @@
-<div class="container">
-<div class="show-buttons container mt-3">
-  <%= link_to "New Fit", new_user_fit_path(@user), class:"btn btn-light m-2" %>
-  <%= link_to "Back to Login", users_path, class:"btn btn-light m-2" %>
-</div>
-
-<div class="container mt-4 mb-3">
-  <% @user.fits.each_with_index do |fit, index| %>
-    <div class="show-card">
-      <div class="m-1">
-        <div class="item-card">
-          <%= image_tag "tops/#{fit.top.image}.png", width: 150, height: 200 %>
-          <%= image_tag "pants/#{fit.pant.image}.png", width: 150, height: 200 %>
-          <%= image_tag "sneakers/#{fit.sneaker.image}.png", width: 150, height: 150 %>
-        </div>
+<div class="fit-container">
+  <div class="fit-column">
+    <div class="user-bar">
+      <%= @user.photo.attached? ? cl_image_tag(@user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
+      <div class="login-content">
+        <p><%= link_to @user.username, user_path(@user) %></p>
       </div>
-      <div class="notes container ms-3">
-        <div class="me-5">
-          <h1><%= fit.name %></h1>
-          <p>Top: <%= fit.top.name %></p>
-          <p>Pants: <%= fit.pant.name %></p>
-          <p>Shoes: <%= fit.sneaker.name %></p>
-          <p>Watch: <%= fit.watch.name %></p>
-        </div>
-      </div>
+      <%= link_to "New Fit", new_user_fit_path(@user), class:"btn btn-light m-2" %>
+      <%= link_to "Back to Login", users_path, class:"btn btn-light m-2" %>
     </div>
-  <% end %>
+
+    <div class="fit-card-container">
+      <% @user.fits.each_with_index do |fit, index| %>
+        <div class="fit-card">
+          <h4><%= fit.name %></h4>
+          <div class="item-card-container">
+            <div class="item-card"><p>Top:</p><%= image_tag "tops/#{fit.top.image}.png", class:"item-img" %><p><%= fit.top.name %></p></div>
+            <div class="item-card"><p>Pants:</p><%= image_tag "pants/#{fit.pant.image}.png", class:"item-img" %><p><%= fit.pant.name %></p></div>
+            <div class="item-card"><p>Shoes:</p><%= image_tag "sneakers/#{fit.sneaker.image}.png", class:"item-img" %><p><%= fit.sneaker.name %></p></div>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
