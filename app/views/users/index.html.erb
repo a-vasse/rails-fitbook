@@ -2,11 +2,13 @@
 <body class="index">
   <div>
     <div class="index-top">
-      <h1>Fitbook</h1>
-      <%= link_to "New User", new_user_path, class:"btn" %>
+      <h1 class="main-title">Fitbook</h1>
     </div>
     <div class="index-main">
+      <div>
+      </div>
       <div class="users-container">
+        <%= link_to "New User", new_user_path, class:"new-button" %>
         <% @users.each do |user| %>
           <div class="user-card">
             <%= user.photo.attached? ? cl_image_tag(user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>

@@ -1,17 +1,14 @@
-.users-container {
-  width: 40vh;
-  padding: 8px;
-}
-
 .user-card {
   display: flex;
   align-items: center;
-  margin-bottom: 4px;
+  margin-bottom: 8px;
   background: white;
   padding: 8px;
   border: 1px solid #a1a1a1;
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px #00000033;
+  width: 100%;
+  line-height: 1.4;
 }
 
 .user-card .login-content {
@@ -21,9 +18,7 @@
 
 .user-card p {
   margin: 0;
-  line-height: 1.4;
-  color: #999999;
-  font-weight: bold;
+  font-size: 16px;
 }
 
 .user-card .login-actions {
@@ -45,7 +40,6 @@
 .user-card a {
   text-decoration: none;
   color: #999999;
-  font-size: 14px;
 }
 
 .user-card a:hover {
