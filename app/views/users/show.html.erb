@@ -1,12 +1,16 @@
 <div class="fit-container">
   <div class="fit-column">
     <div class="user-bar">
-      <%= @user.photo.attached? ? cl_image_tag(@user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
-      <div class="login-content">
-        <p><%= link_to @user.username, user_path(@user) %></p>
+      <div class="user-details">
+        <%= @user.photo.attached? ? cl_image_tag(@user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
+        <div class="user-name">
+          <h1><%= @user.username %>'s Fits</h1>
+        </div>
       </div>
-      <%= link_to "New Fit", new_user_fit_path(@user), class:"btn btn-light m-2" %>
-      <%= link_to "Back to Login", users_path, class:"btn btn-light m-2" %>
+      <div class="user-options">
+        <%= link_to "New Fit", new_user_fit_path(@user), class:"btn btn-light m-2" %>
+        <%= link_to "Back to Login", users_path, class:"btn btn-light m-2" %>
+      </div>
     </div>
 
     <div class="fit-card-container">

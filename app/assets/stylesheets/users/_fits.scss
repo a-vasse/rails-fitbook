@@ -8,16 +8,35 @@
   margin-top: 2rem;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   background: white;
-  padding: 8px;
+  padding: 12px;
   border: 1px solid #a1a1a1;
   border-radius: 0.25rem;
   box-shadow: 0 1px 2px #00000033;
   line-height: 1.4;
 }
 
+.user-details {
+  display: flex;
+  align-items: center;
+}
+.user-options {
+  display: flex;
+  flex-direction: column;
+}
+
+.user-name{
+  margin-left: 12px;
+  h1 {
+  font-family: Lobster;
+  }
+}
+
 .user-bar .avatar {
-  width: 120px;
+  width: 100px;
+  padding: 4px;
+  border: 1px solid #777777;
 }
 
 .fit-card-container {
