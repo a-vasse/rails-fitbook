@@ -5,53 +5,24 @@
 </div>
 
 <div class="container mt-4 mb-3">
-  <div id="carouselExampleControls" class="carousel slide">
-    <div class="carousel-inner">
-
-      <% @user.fits.each_with_index do |fit, index| %>
-        <div class="carousel-item <%= "active" if  index.zero? %>">
-          <div class="show-card">
-            <div class="m-1">
-              <div class="item-card">
-                <%= image_tag "tops/#{fit.top.image}.png", width: 150, height: 200 %>
-              </div>
-              <div class="item-card mt-2">
-                <%= image_tag "pants/#{fit.pant.image}.png", width: 150, height: 200 %>
-              </div>
-              <div class="item-card mt-2">
-                <%= image_tag "sneakers/#{fit.sneaker.image}.png", width: 150, height: 150 %>
-              </div>
-            </div>
-            <div>
-              <div class="item-card mt-2">
-                <%= image_tag "watches/#{fit.watch.image}.png", width: 100, height: 175 %>
-              </div>
-            </div>
-            <div class="notes container ms-3">
-              <div class="me-5">
-                <h1><%= fit.name %></h1>
-                <p>Top: <%= fit.top.name %></p>
-                <p>Pants: <%= fit.pant.name %></p>
-                <p>Shoes: <%= fit.sneaker.name %></p>
-                <p>Watch: <%= fit.watch.name %></p>
-              </div>
-            </div>
-          </div>
+  <% @user.fits.each_with_index do |fit, index| %>
+    <div class="show-card">
+      <div class="m-1">
+        <div class="item-card">
+          <%= image_tag "tops/#{fit.top.image}.png", width: 150, height: 200 %>
+          <%= image_tag "pants/#{fit.pant.image}.png", width: 150, height: 200 %>
+          <%= image_tag "sneakers/#{fit.sneaker.image}.png", width: 150, height: 150 %>
         </div>
-      <% end %>
-
       </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+      <div class="notes container ms-3">
+        <div class="me-5">
+          <h1><%= fit.name %></h1>
+          <p>Top: <%= fit.top.name %></p>
+          <p>Pants: <%= fit.pant.name %></p>
+          <p>Shoes: <%= fit.sneaker.name %></p>
+          <p>Watch: <%= fit.watch.name %></p>
+        </div>
       </div>
-
     </div>
-  </div>
-</div>
+  <% end %>
 </div>

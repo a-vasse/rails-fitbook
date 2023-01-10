@@ -1,25 +1,26 @@
 
-<div class="login-container container mt-5">
-  <div class="me-5">
-    <h1>Fitbook</h1>
-  </div>
+<body class="index">
   <div>
-    <div class="login-button container">
-    <%= link_to "New User", new_user_path, class:"btn btn-light mb-4" %>
+    <div class="index-top">
+      <h1>Fitbook</h1>
+      <%= link_to "New User", new_user_path, class:"btn" %>
     </div>
-    <% @users.each do |user| %>
-      <div class="login">
-        <%= user.photo.attached? ? cl_image_tag(user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
-        <div class="login-content">
-          <p><%= link_to user.username, user_path(user) %></p>
-        </div>
-        <div class="login-actions">
-        <p class="ml-5">Dumpter</p>
-          <%= link_to user_path(user), data: { turbo_method: 'delete', turbo_confirm: "Delete User: #{user.username}?" }, class: 'btn' do %>
-            <i class="fa-solid fa-dumpster"></i>
-          <% end %>
-        </div>
+    <div class="index-main">
+      <div class="users-container">
+        <% @users.each do |user| %>
+          <div class="user-card">
+            <%= user.photo.attached? ? cl_image_tag(user.photo.key, class: "avatar") : image_tag("users/blankuser.png", class:"avatar") %>
+            <div class="login-content">
+              <p><%= link_to user.username, user_path(user) %></p>
+            </div>
+            <div class="login-actions">
+              <%= link_to user_path(user), data: { turbo_method: 'delete', turbo_confirm: "Delete User: #{user.username}?" }, class: 'btn' do %>
+                <i class="fa-solid fa-dumpster"></i>
+              <% end %>
+            </div>
+          </div>
+        <% end %>
       </div>
-    <% end %>
+    </div>
   </div>
-</div>
+</body>

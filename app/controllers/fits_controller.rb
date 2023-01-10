@@ -9,7 +9,7 @@ class FitsController < ApplicationController
     @fit = Fit.new(fit_params)
     @fit.user = @user
     if @fit.save
-      redirect_to users_path
+      redirect_to user_path(params[:user_id])
     else
       render :new, status: :unprocessable_entity
     end
